@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysian Road Tax Guide 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #16a34a;
+            /* Medium Green */
+            --primary-dark: #14532d;
+            /* Dark Forest Green */
+            --accent: #4ade80;
+            /* Light Green */
+            --bg: #f0fdf4;
+            /* Mint White Background */
+            --text-dark: #1f2937;
+            --text-muted: #4b5563;
+            --white: #ffffff;
+            --card-hover: #f7fee7;
+            /* Very light lime on hover */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #064e3b, #16a34a);
+            color: white;
+            padding: 110px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 19px;
+            opacity: 0.92;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary);
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 25px;
+            transition: 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            background: var(--accent);
+            color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .inline-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(22, 163, 74, 0.2);
+            transition: 0.2s;
+        }
+
+        .inline-link:hover {
+            border-bottom-color: var(--primary);
+            background: rgba(22, 163, 74, 0.05);
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 70px auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 45px;
+            margin-bottom: 40px;
+            box-shadow: 0 12px 35px rgba(20, 83, 45, 0.08);
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-left: 5px solid var(--accent);
+        }
+
+        .card h2 {
+            font-size: 34px;
+            margin-bottom: 22px;
+            color: var(--primary-dark);
+        }
+
+        .card p {
+            margin-bottom: 18px;
+            font-size: 17px;
+            color: var(--text-muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .box {
+            background: #f0fdf4;
+            border-left: 5px solid var(--primary);
+            padding: 25px;
+            border-radius: 18px;
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            background: #dcfce7;
+        }
+
+        .box h3 {
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #16a34a, #065f46);
+            color: white;
+            padding: 50px;
+            border-radius: 24px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .highlight h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .highlight p {
+            font-size: 18px;
+            color: #ecfdf5;
+        }
+
+        /* LIST */
+        ul {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .stat-box {
+            background: #064e3b;
+            color: white;
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+        }
+
+        .stat-box h3 {
+            font-size: 38px;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #064e3b;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+            margin-top: 70px;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            max-width: 850px;
+            margin: 0 auto 30px auto;
+            font-size: 19px;
+            opacity: 0.92;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary);
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background: #f0f7ff;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: -60px auto 70px auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card h2 {
+            font-size: 34px;
+            margin-bottom: 25px;
+            color: var(--primary-dark);
+            border-left: 6px solid var(--primary);
+            padding-left: 20px;
+        }
+
+        .card p {
+            margin-bottom: 20px;
+            font-size: 17px;
+            color: var(--text-muted);
+        }
+
+        a.inline-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(37, 99, 235, 0.2);
+            transition: 0.2s;
+        }
+
+        a.inline-link:hover {
+            border-bottom-color: var(--primary);
+            background: rgba(37, 99, 235, 0.05);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .box:hover {
+            background: #ffffff;
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+        }
+
+        .box h3 {
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #2563eb, #1e3a8a);
+            color: white;
+            padding: 60px;
+            border-radius: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .highlight h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .highlight p {
+            font-size: 19px;
+            color: #f3f4f6;
+            margin-bottom: 30px;
+        }
+
+        .highlight .cta-button {
+            border: 2px solid white;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            color: var(--text-muted);
+            font-size: 16px;
+            position: relative;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .stat-box {
+            background: #0f172a;
+            color: white;
+            padding: 35px 20px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .stat-box h3 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 70px;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px) {
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .container {
+                width: 95%;
+                margin-top: -40px;
+            }
+
+            .card {
+                padding: 30px 20px;
+            }
+
+            .card h2 {
+                font-size: 26px;
+            }
+
+            .highlight {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <h1>Complete Malaysian Road Tax Guide 2026</h1>
+        <p>
+            Understand vehicle taxation, explore the latest EV road tax systems, and discover how
+            digital tools simplify ownership for modern drivers.
+        </p>
+        <a href="https://roadtaxcalculators.my/" class="cta-button">Launch Road Tax Calculator</a>
+    </section>
+
+    <div class="container">
+
+        <section class="card">
+            <h2>Introduction</h2>
+            <p>
+                Road tax is a vital legal responsibility for every vehicle owner in Malaysia. All registered vehicles
+                must
+                display a valid road tax issued by the Road Transport Department (JPJ). Whether you drive a motorcycle,
+                sedan, or a modern EV, staying updated on renewal costs is crucial.
+            </p>
+            <p>
+                The complexity of Malaysian road tax calculations—which involve engine capacity, region, and vehicle
+                type—often
+                leads to confusion. Fortunately, you can now use a professional
+                <a href="https://roadtaxcalculators.my/" class="inline-link">Malaysian road tax calculator</a>
+                to get instant, precise estimates.
+            </p>
+        </section>
+
+        <section class="highlight">
+            <h2>Instant Calculations</h2>
+            <p>
+                Don't guess your renewal fees. Use our specialized tools to calculate
+                your yearly road tax for petrol, diesel, or electric vehicles.
+            </p>
+            <a href="https://roadtaxcalculators.my/" class="cta-button">Calculate Your Road Tax Now</a>
+        </section>
+
+        <section class="card">
+            <h2>Road Tax for Petrol & Diesel Vehicles</h2>
+            <p>
+                For traditional internal combustion engine (ICE) vehicles, the rate is primarily determined by engine
+                capacity (CC).
+                The higher the CC, the higher the tax bracket.
+            </p>
+            <p>
+                If you are planning to buy a new car, checking the
+                <a href="https://roadtaxcalculators.my/" class="inline-link">road tax for petrol cars</a>
+                is a smart first step in budgeting your annual maintenance costs.
+            </p>
+
+            <div class="grid">
+                <div class="box">
+                    <h3>Fast Estimates</h3>
+                    <p>Get immediate numbers at <a href="https://roadtaxcalculators.my/"
+                            class="inline-link">roadtaxcalculators.my</a> without manual formulas.</p>
+                </div>
+                <div class="box">
+                    <h3>Ownership Types</h3>
+                    <p>Easily distinguish between private and company-registered vehicle tax rates.</p>
+                </div>
+                <div class="box">
+                    <h3>Regional Rates</h3>
+                    <p>Calculations automatically adjust for Peninsular Malaysia vs. East Malaysia (Sabah/Sarawak).</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Electric Vehicle Road Tax in 2026</h2>
+            <p>
+                The transition to EVs has introduced a new kilowatt-based taxation system. As Malaysia incentivizes
+                green energy, EV owners need to stay updated on the latest motor power tax brackets.
+            </p>
+            <p>
+                You can easily find your specific rate by using an
+                <a href="https://roadtaxcalculators.my/" class="inline-link">EV road tax calculator</a>,
+                which takes the mystery out of kilowatt-to-tax conversions.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Motorcycle Road Tax</h2>
+            <p>
+                Motorcycles remain the backbone of Malaysian commuting. While generally more affordable,
+                high-performance bikes (above 250cc) face different pricing tiers compared to standard mopeds.
+            </p>
+            <p>
+                Plan your bike renewal effortlessly by visiting
+                <a href="https://roadtaxcalculators.my/" class="inline-link">Road Tax Calculators Malaysia</a>
+                for the most recent 2026 rates.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Financial Planning for Drivers</h2>
+            <div class="stats">
+                <div class="stat-box">
+                    <h3>100%</h3>
+                    <p>Accurate Rates</p>
+                </div>
+                <div class="stat-box">
+                    <h3>2026</h3>
+                    <p>Latest Guidelines</p>
+                </div>
+                <div class="stat-box">
+                    <h3>FREE</h3>
+                    <p>To Use Online</p>
+                </div>
+            </div>
+            <p style="margin-top:40px; text-align:center;">
+                Ready to find out your exact amount? <br>
+                <a href="https://roadtaxcalculators.my/" class="inline-link" style="font-size:20px;">Try the Road Tax
+                    Calculator Tool</a>
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Conclusion</h2>
+            <p>
+                Managing your vehicle costs shouldn't be a headache. By leveraging modern digital resources like
+                <strong>Road Tax Calculators</strong>, Malaysian drivers can stay legally compliant while
+                maintaining a clear financial overview.
+            </p>
+            <p>
+                Before your next renewal date, ensure you visit
+                <a href="https://roadtaxcalculators.my/" class="inline-link">roadtaxcalculators.my</a>
+                to get the most accurate and up-to-date information for your specific vehicle type.
+            </p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Malaysian Road Tax Guide</p>
+        <p style="margin-top:10px;">Powered by <a href="https://roadtaxcalculators.my/">RoadTaxCalculators.my</a></p>
+    </footer>
+
+</body>
+
+</html>
